@@ -1,0 +1,11 @@
+problem -> introduce interface
+
+problem -> extract address object
+
+problem2 -> duplication copy paste
+
+problem3 -> null object
+
+problem4 -> Primitive Obsession
+
+problem5 -> Temporary Field
