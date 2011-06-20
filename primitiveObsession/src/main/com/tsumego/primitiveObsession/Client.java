@@ -1,4 +1,4 @@
-package com.tsumego.entities;
+package com.tsumego.primitiveObsession;
 
 public class Client {
     private String name;

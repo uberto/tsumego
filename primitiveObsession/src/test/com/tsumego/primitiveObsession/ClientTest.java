@@ -1,4 +1,4 @@
-package com.tsumego.entities;
+package com.tsumego.primitiveObsession;
 
 import org.junit.Test;
 
@@ -10,8 +10,8 @@ public class ClientTest {
 
 
     @Test
-    public void shouldSendEmail() throws Exception {
-       Client client = new Client("acme", "client@acme.com", "High Street, 42", "Springfield", "Homer", "homer@acme.com", "Low Street, 24", "Springfield");
+    public void shouldGetContactDetails() throws Exception {
+       com.tsumego.primitiveObsession.Client client = new com.tsumego.primitiveObsession.Client("acme", "client@acme.com", "High Street, 42", "Springfield", "Homer", "homer@acme.com", "Low Street, 24", "Springfield");
        assertThat(client.getName(), is("acme"));
        assertThat(client.getEmail(), is("client@acme.com"));
        assertThat(client.getStreet(), is("High Street, 42"));
