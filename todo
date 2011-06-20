@@ -1,11 +1,11 @@
+problem -> rename and extract
+
 problem -> introduce interface
 
-problem -> extract address object
+problem -> primitiveObsession / long parameter list extract street object
 
-problem2 -> duplication copy paste
+problem -> duplication copy paste
 
-problem3 -> null object
+problem -> null object
 
-problem4 -> Primitive Obsession
-
-problem5 -> Temporary Field
+problem -> Temporary Field

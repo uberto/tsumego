@@ -3,22 +3,22 @@ package com.tsumego.entities;
 public class Client {
     private String name;
     private String email;
-    private String address;
+    private String street;
     private String city;
 
     private String contactName;
     private String contactEmail;
-    private String contactAddress;
+    private String contactStreet;
     private String contactCity;
 
-    public Client(String name, String email, String address, String city, String contactName, String contactEmail, String contactAddress, String contactCity) {
+    public Client(String name, String email, String street, String city, String contactName, String contactEmail, String contactStreet, String contactCity) {
         this.name = name;
         this.email = email;
-        this.address = address;
+        this.street = street;
         this.city = city;
         this.contactName = contactName;
         this.contactEmail = contactEmail;
-        this.contactAddress = contactAddress;
+        this.contactStreet = contactStreet;
         this.contactCity = contactCity;
     }
 
@@ -30,8 +30,8 @@ public class Client {
         return email;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
     public String getCity() {
@@ -46,8 +46,8 @@ public class Client {
         return contactEmail;
     }
 
-    public String getContactAddress() {
-        return contactAddress;
+    public String getContactStreet() {
+        return contactStreet;
     }
 
     public String getContactCity() {
