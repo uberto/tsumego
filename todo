@@ -1,8 +1,8 @@
 problem longMethod -> rename and extract to make clear
 
-remove the if and the null parameter
+problem removeIfAndNull -> the if and the null parameter
 
-inline, rename and extract method
+problem betterNames -> (date example) inline, rename and extract method
 
 problem -> introduce interface
 
