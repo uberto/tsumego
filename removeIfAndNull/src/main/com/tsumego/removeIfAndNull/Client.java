@@ -1,4 +1,4 @@
-package com.tsumego.longMethod;
+package com.tsumego.removeIfAndNull;
 
 import java.lang.String;
 
@@ -10,17 +10,9 @@ public class Client {
 
     private String lastName;
 
-
-    public Client(String fullName) {
-
-        for(int i = 0; i < fullName.length(); i++){
-
-            if (fullName.charAt(i) == ' '){
-
-            }
-        }
-
+    public Client(String firstName, String middleName, String lastName) {
         this.firstName = firstName;
+        this.middleName = middleName;
         this.lastName = lastName;
     }
 
@@ -34,5 +26,13 @@ public class Client {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public String getFullName() {
+        if (middleName == null){
+            return firstName + " " + lastName;
+        } else {
+            return firstName + " " + middleName + " " + lastName;
+        }
     }
 }

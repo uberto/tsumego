@@ -1,11 +1,17 @@
-problem -> rename and extract
+problem longMethod -> rename and extract to make clear
+
+remove the if and the null parameter
+
+inline, rename and extract method
 
 problem -> introduce interface
 
-problem -> primitiveObsession / long parameter list extract street object
+problem primitiveObsession ->  / long parameter list extract street object
 
 problem -> duplication copy paste
 
 problem -> null object
 
 problem -> Temporary Field
+
+introduce strategy instead of template

@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/primitiveObsession/src/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/longMethod/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/longMethod/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/removeIfAndNull/src/main" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/removeIfAndNull/src/test" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

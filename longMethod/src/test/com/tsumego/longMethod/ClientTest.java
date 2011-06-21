@@ -9,16 +9,19 @@ public class ClientTest {
 
 
     @Test
-    public void shouldComposeLongName() throws Exception {
-        Client client = new Client("John", "Long", "Silver");
-        assertThat(client.getFullName(), is("John Long Silver"));
+    public void shouldDecomposeLongName() throws Exception {
+        Client client = new Client("John Long Silver");
+        assertThat(client.getFirstName(), is("John"));
+        assertThat(client.getMiddleName(), is("Long"));
+        assertThat(client.getLastName(), is("Silver"));
 
     }
 
         @Test
-    public void shouldComposeShortName() throws Exception {
-        Client client = new Client("Homer", null, "Simpson");
-        assertThat(client.getFullName(), is("Homer Simpson"));
+    public void shouldDecomposeShortName() throws Exception {
+        Client client = new Client("Homer Simpson");
+        assertThat(client.getFirstName(), is("Homer"));
+        assertThat(client.getLastName(), is("Simpson"));
 
     }
 }
