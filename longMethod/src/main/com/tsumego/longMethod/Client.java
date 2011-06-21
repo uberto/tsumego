@@ -14,14 +14,12 @@ public class Client {
         int secondSep = -1;
 
         for (int i = 0; i < fullName.length(); i++) {
-
             if (fullName.charAt(i) == ' ') {
                 if (firstSep == -1) {
                     firstSep = i;
                 } else {
                     secondSep = i;
                 }
-
             }
         }
 
