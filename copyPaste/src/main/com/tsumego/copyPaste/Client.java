@@ -4,17 +4,23 @@ public class Client {
 
     private String name;
 
-
     public Client(String name) {
-
         this.name = name;
     }
 
-    public String sayHello() {
+    public String sayHello(boolean isHtmlRequired) {
+        if (isHtmlRequired) {
+            return sayHelloHtml();
+        } else {
+            return sayHello();
+        }
+    }
+
+    private String sayHello() {
         return "Hello " + name + " !";
     }
 
-    public String sayHelloHtml() {
+    private String sayHelloHtml() {
         return "<html><body><h1>Hello " + name + " !</h1></body></html>";
     }
 }

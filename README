@@ -1,0 +1,58 @@
+Another cool word from Japan for programmers pasionate about their work!
+
+In tsumego refactoring game you start from a simple snippet of code with tests, and you have to figure out how to refactor it just naming a series of refactoring steps to portions of the code.
+
+Goal:
+    remove the smell and improve the code
+
+What you can do:
+    apply any refactor
+    slightly change the tests
+
+What you cannot do:
+    broke the tests
+    change domain logic
+    write code outside a refactoring
+
+
+
+Example (from CopyPaste):
+
+public class Client {
+
+    private String name;
+
+    public Client(String name) {
+        this.name = name;
+    }
+
+    public String sayHello(boolean isHtmlRequired) {
+        if (isHtmlRequired) {
+            return sayHelloHtml();
+        } else {
+            return sayHello();
+        }
+    }
+
+    private String sayHello() {
+        return "Hello " + name + " !";
+    }
+
+    private String sayHelloHtml() {
+        return "<html><body><h1>Hello " + name + " !</h1></body></html>";
+    }
+}
+
+
+Correct Solution:
+    1. inline sayHello
+    2. inline sayHelloHtml
+    3. extract again sayHello (2 replacements)
+    3. extract again sayHelloHtml
+    5. extract parameter for the call to sayHello in htmlWrapper
+    6. rename sayHelloHtml to htmlWrapper
+
+Wrong solution:
+    modify the code of sayHelloHtml adding a parameter helloString and passing that in the if
+
+
