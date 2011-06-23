@@ -1,17 +1,32 @@
-problem longMethod -> rename and extract to make clear
+    problem -> introduce interface
 
-problem removeIfAndNull -> the if and the null parameter
+    problem -> null object
 
-problem betterNames -> (date example) inline, rename and extract method
+    problem -> Temporary Field
 
-problem -> introduce interface
+    introduce strategy instead of template
 
-problem primitiveObsession ->  / long parameter list extract street object
+    chainOfResponsability using immutable instead of beans
 
-problem -> duplication copy paste
+solutions
 
-problem -> null object
+    copyPaste ->
+        1. inline sayHello
+        2. inline sayHelloHtml
+        3. extract again sayHello (2 replacements)
+        3. extract again sayHelloHtml
+        5. extract parameter for the call to sayHello in sayHelloHtml
+        6. rename sayHelloHtml to htmlWrapper
 
-problem -> Temporary Field
 
-introduce strategy instead of template
+    longMethod -> rename and extract to make clear
+
+    primitiveObsession ->  / long parameter list extract street object
+
+    removeIfAndNull -> the if and the null parameter
+
+    betterNames -> date example with unclear code
+
+
+
+

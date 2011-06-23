@@ -12,6 +12,8 @@
       <sourceFolder url="file://$MODULE_DIR$/removeIfAndNull/src/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/copyPaste/src/main" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/copyPaste/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/betterNames/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/betterNames/src/main" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

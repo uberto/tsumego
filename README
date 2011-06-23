@@ -1,9 +1,14 @@
-Another cool word from Japan for programmers pasionate about their work!
+Another cool word from Japan for programmers passionate about their work!
 
 In tsumego refactoring game you start from a simple snippet of code with tests, and you have to figure out how to refactor it just naming a series of refactoring steps to portions of the code.
+These tsumego exercises are not meant to be a replacement for other practises to sharpen your own programming skills, rather they complement them.
+In tsumego the focus is on be able to refactoring towards a better design without breaking tests and functionality.
+As side benefit tsumego should help people on concentrate on a single refactoring at time, proceeding in small steps, rather than rewriting.
+Finally, thanks to modern IDEs, many of these small steps can be done automatically with a single keystroke, that makes them not only safer but faster than write up code.
 
 Goal:
     remove the smell and improve the code
+    every exercise should have a clearly defined goal to archive
 
 What you can do:
     apply any refactor
@@ -49,7 +54,7 @@ Correct Solution:
     2. inline sayHelloHtml
     3. extract again sayHello (2 replacements)
     3. extract again sayHelloHtml
-    5. extract parameter for the call to sayHello in htmlWrapper
+    5. extract parameter for the call to sayHello in sayHelloHtml
     6. rename sayHelloHtml to htmlWrapper
 
 Wrong solution:
