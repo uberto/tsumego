@@ -1,12 +1,10 @@
 package com.tsumego.duplication;
 
-import com.tsumego.godClass.Client;
-import com.tsumego.godClass.StorageService;
-import com.tsumego.godClass.StorageType;
-import com.tsumego.godClass.ValueObjectsArchiver;
+import com.tsumego.godClass.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,13 +26,48 @@ public class ValueObjectsArchiverTest {
 
         assertNull(archiver.retrieveClient("homer"));
 
-        Client homer = new Client("Homer", "Simpson");
-
-        archiver.storeClient("homer", homer);
+        archiver.storeClient("homer", createClient());
 
         Client newHomer = archiver.retrieveClient("homer");
-        assertThat(newHomer, is(homer));
+        assertThat(newHomer, is(createClient()));
 
+    }
+
+    @Test
+    public void shouldRetrieveSameItem() {
+
+        assertNull(archiver.retrieveItem("batmobile"));
+
+        archiver.storeItem("batmobile", createItem());
+
+        Item newbatmobile = archiver.retrieveItem("batmobile");
+        assertThat(newbatmobile, is(createItem()));
+
+    }
+
+    @Test
+    public void shouldRetrieveClientAndItemSameItem() {
+
+        archiver.storeClient("sameId", createClient());
+
+        archiver.storeItem("sameId", createItem());
+
+        Item newbatmobile = archiver.retrieveItem("sameId");
+
+        Client newHomer = archiver.retrieveClient("sameId");
+
+        assertThat(newbatmobile, is(createItem()));
+        assertThat(newHomer, is(createClient()));
+
+    }
+
+    private Client createClient() {
+        return new Client("Homer", "Simpson");
+    }
+
+
+    private Item createItem() {
+        return new Item("Batmobile", "Advanced car for dark superheros", new BigDecimal(1234567.89));
     }
 
     private static StorageService createSimpleStorage() {
